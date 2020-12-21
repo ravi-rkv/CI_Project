@@ -18,7 +18,16 @@ class Login extends CI_Controller {
 
    public function auth()
    {
-       
+    $this->form_validation->set_rules('username', 'Username', 'trim|required');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required');
+    if ($this->form_validation->run() == TRUE)
+    {       
+            
+    }
+    else
+    {
+            $this->load->view('Admin/login');
+    }
    }
     
 }

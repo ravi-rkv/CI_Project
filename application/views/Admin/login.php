@@ -32,15 +32,17 @@
 					</h4>
                     <div class="" >
                     </div>
-					<form class="form-box px-3">
+					<form class="form-box px-3" action="<?php echo base_url().'login/auth'?>" name="lform" id="lform"  method="post">
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" name="" placeholder="User Name " tabindex="10" required>
+							<input type="text" name="username" id="username" placeholder="User Name "  tabindex="10" >
 						</div>
+                        <?php echo form_error('username')?>
 						<div class="form-input">
 							<span><i class="fa fa-key"></i></span>
-							<input type="password" name="" placeholder="Password" required>
+							<input type="password" name="password" id="password" placeholder="Password"  >
 						</div>
+                        <?php echo form_error('password')?>
 
 						<div class="mb-3">
 							<div class="custom-control custom-checkbox">
